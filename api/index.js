@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 const app = express();
 dotenv.config();
 
+// Database Connection
 try {
   mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
 } catch (error) {
