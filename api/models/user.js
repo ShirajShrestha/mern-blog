@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Create indexes to fix unique constraint
 userSchema.index({ username: 1, email: 1 }, { unique: true });
 
 const User = mongoose.model("User", userSchema);
